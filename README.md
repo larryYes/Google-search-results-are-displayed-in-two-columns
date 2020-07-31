@@ -1,2 +1,2 @@
-# Google-search-results-are-displayed-in-two-columns
+# 说明
 谷歌搜索结果两栏显示
