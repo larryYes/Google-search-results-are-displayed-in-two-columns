@@ -12,8 +12,4 @@
 #### 谷歌搜索结果两栏显示
 ![](https://s1.ax1x.com/2020/07/30/aubnRU.png)
 
-# 三、注意
-### 使用四栏修改搜索结果每页显示条数效果更佳
-![](https://s1.ax1x.com/2020/07/30/anDDiV.png)
-
-### 强烈建议配合AdblockPlus使用
+# 三、强烈建议配合AdblockPlus使用
