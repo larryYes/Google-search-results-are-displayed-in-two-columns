@@ -1,18 +1,20 @@
 // ==UserScript==
 // @name            谷歌搜索结果两栏显示
 // @namespace       http://tampermonkey.net/
-// @version         0.2.4
+// @version         0.3.1
 // @description     搜索结果支持两栏
 // @author          LGJ
 // @run-at          document-start
 // @include         *://encrypted.google.*/search*
 // @include         *://*.google*/search*
 // @include         *://*.google*/webhp*
-// @grant           none
-// @note            2020-07-31 解决一下网页缩放带来的排版错乱问题
-// @note            2020-07-31 谷歌分页栏居中排版显示
-// @note            2020-07-31 大大减少了搜索结果排版错乱问题
-// @create          2020-07-30 实现谷歌搜索结果两栏展示
+// @grant           daiim
+// @note            2020-08-01 V0.3.1 部分代码重构，增加注解，优化模块摆放位置
+// @note            2020-07-31 V0.2.7 常规BUG修复
+// @note            2020-07-31 V0.2.3 解决一下网页缩放带来的排版错乱问题
+// @note            2020-07-31 V0.2.1 谷歌分页栏居中排版显示
+// @note            2020-07-31 V0.1.3 大大减少了搜索结果排版错乱问题
+// @create          2020-07-30 V0.1.0 实现谷歌搜索结果两栏展示
 // ==/UserScript==
 
 
@@ -41,9 +43,6 @@ const style = `
 .xERobd {
     display: none;
 }
-/**
-屏蔽相关搜索
-**/
 
 /**
 屏蔽YouTube视频
@@ -52,24 +51,21 @@ g-section-with-header {
     display: none!important;
 }
 
+
 .mw
 {
     max-width: 1600px !important;
-
     margin: auto;
 }
-
 .col
 {
     width: 100% !important;
 }
-
 #center_col
 {
     margin-left: 20px !important;
     width: 100% !important;
 }
-
 .g
   {
     float: left !important;
@@ -83,31 +79,44 @@ g-section-with-header {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
 
+
+/**工具栏居中**/
+.hdtb-mn-cont {
+    text-align:center !important;
+    margin-left: 0px!important;
+}
+
 /**Google分页栏**/
 #foot {
     float: left !important;
     width: 100% !important;
 }
 
+/**Google搜索栏**/
 .big #tsf {
     width: 1000px !important;
     margin: auto !important;
 }
-.WE0UJf {
-    margin-left: 40%!important;
-}
 
+/**网页栏**/
 #hdtb-msb {
-    width: 100%;
-    justify-content: center;
+    width: 100%!important;
+    justify-content: center!important;
 }
 #hdtb-msb-vis {
     margin-left: 0px !important;
 }
-.hdtb-mn-cont {
-    text-align:center;
-}
 
+/** 用时栏 **/
+.WE0UJf {
+    margin-left: 0px!important;
+}
+#result-stats{
+    padding-right: 0px!important;
+    position:relative!important;
+    text-align:center !important;
+
+}
 
 `;
 
