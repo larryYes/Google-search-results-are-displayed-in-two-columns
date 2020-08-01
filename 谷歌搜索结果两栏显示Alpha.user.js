@@ -101,13 +101,12 @@ g-section-with-header {
     width: 100%;
     justify-content: center;
 }
-#hdtbMenus {
-    margin-left: 30%!important;
-}
 #hdtb-msb-vis {
     margin-left: 0px !important;
 }
-
+.hdtb-mn-cont {
+    text-align:center;
+}
 
 
 `;
